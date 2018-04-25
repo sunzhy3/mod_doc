@@ -1,0 +1,432 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.1 快速反向匹配搜索 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="section1.2.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1. 光流
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="section1.1.html">
+            
+                <a href="section1.1.html">
+            
+                    
+                    1.1 快速反向匹配搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="section1.2.html">
+            
+                <a href="section1.2.html">
+            
+                    
+                    1.2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    Chapter2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.1 快速反向匹配搜索</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="section11">Section1.1</h1>
+<p>Fast Optical Flow using Dense Inverse Search</p>
+<p>&#x4F5C;&#x8005;: Till Kroeger,  Radu Timofte, Dengxin Dai, Luc Van Goo</p>
+<p>&#x53D1;&#x8868;&#x5E74;&#x4EFD;: 2016&#x5E74;</p>
+<p>&#x53D1;&#x8868;&#x4F1A;&#x8BAE;(&#x671F;&#x520A;): ECCV</p>
+<p><a href="http://www.vision.ee.ethz.ch/~kroegert/OFlow/" target="_blank">&#x9879;&#x76EE;&#x4E3B;&#x9875;</a></p>
+<h1 id="1introduction">1.Introduction</h1>
+<p>&#x7565;</p>
+<h1 id="2-proposed-method">2. Proposed method</h1>
+<h2 id="21-fast-inverse-search-for-correspondences">2.1 Fast inverse search for correspondences</h2>
+<p>&#x6838;&#x5FC3;&#x7684;&#x90E8;&#x5206;&#x5C31;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x9AD8;&#x6548;&#x7684;&#x8FDB;&#x884C;&#x5757;&#x5339;&#x914D;&#x7684;&#x641C;&#x7D22;, </p>
+<p>&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5728;&#x53C2;&#x8003;&#x56FE;&#x50CF; <script type="math/tex; ">I_{t}</script> &#x4E2D;&#x7ED9;&#x5B9A;&#x7684;&#x6A21;&#x677F;&#x5757; <script type="math/tex; ">T</script>, &#x5927;&#x5C0F;&#x4E3A; <script type="math/tex; ">\theta_{ps} \times \theta_{ps}</script>, &#x4E2D;&#x5FC3;&#x70B9;&#x4E3A; <script type="math/tex; ">x = (x, y)^{T}</script>, &#x6211;&#x4EEC;&#x7684;&#x76EE;&#x6807;&#x662F;&#x5728;&#x4E0B;&#x4E00;&#x5E27;&#x56FE;&#x50CF; <script type="math/tex; ">I_{t+1}</script> &#x4E2D;&#x627E;&#x5230;&#x5927;&#x5C0F;&#x4E3A; <script type="math/tex; ">\theta_{ps} \times \theta_{ps}</script>&#x6700;&#x5339;&#x914D;&#x7684;&#x5757;, </p>
+<p>&#x8F6C;&#x5316;&#x4E3A;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5BFB;&#x627E;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x5411;&#x91CF; <script type="math/tex; ">u = (u, v)</script> &#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x6700;&#x5C0F;&#x5316;</p>
+<p>&#x6CE8;: &#x4E0B;&#x9762; <script type="math/tex; ">u</script>, <script type="math/tex; ">x</script> &#x90FD;&#x6307;&#x5411;&#x91CF;.</p>
+<p><script type="math/tex; mode=display">
+u = argmin_{u^{'}} \sum_{x} [I_{t+1}(x + u^{'}) - T(x)]^{2}, \quad (1)
+</script></p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5229;&#x7528; LuKas-Kanade &#x7B97;&#x6CD5;&#x6765;&#x8FDB;&#x884C;&#x4F18;&#x5316;, &#x76F4;&#x5230;&#x4E0A;&#x9762;&#x7684;&#x516C;&#x5F0F;&#x6536;&#x655B;, &#x4E00;&#x822C;&#x5206;&#x6210;&#x4E24;&#x6B65;.</p>
+<p><script type="math/tex; mode=display">
+\Delta u = argmin_{\Delta u^{'}} \sum_{x} [I_{t+1}(x+u+\Delta u^{'}) - T(x)]^{2}, \quad (2)
+
+u = u + \Delta u
+</script>
+&#x539F;&#x59CB;&#x7684; LuKas-Kanade &#x7B97;&#x6CD5;&#x9700;&#x8981;&#x590D;&#x6742;&#x7684;&#x91CD;&#x590D;&#x8BA1;&#x7B97; Hessian &#x77E9;&#x9635;, &#x5177;&#x4F53;&#x7684;&#x8BB2;, </p>
+<p>&#x5C06; &#x4E00;&#x4E2A;&#x5339;&#x914D;&#x8BB0;&#x505A; <script type="math/tex; ">W(x; u)</script>, &#x5176;&#x4E2D; <script type="math/tex; ">u = (u, v)^{T}</script>, <script type="math/tex; ">x = (x, y)^{T}</script>, &#x5219;
+<script type="math/tex; ">W(x; u) = (x+u, y+v)</script>, &#x5219;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F18;&#x5316;&#x7684;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x4E3A;</p>
+<p><script type="math/tex; mode=display">
+\sum_{x} [I_{t+1}(W(x; u)) - T(x)]^{2}
+</script></p>
+<p>&#x5176;&#x4E2D; <script type="math/tex; ">u</script> &#x901A;&#x8FC7;&#x4E24;&#x6B65;&#x6765;&#x5BFB;&#x627E;</p>
+<p><script type="math/tex; mode=display">
+\sum_{x} [I_{t+1}(W(x; u + \Delta u)) - T(x)]^{2}, (6)
+
+u = u + \Delta u
+</script></p>
+<p>&#x91C7;&#x7528; Gauss-Newton &#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x6765;&#x6700;&#x5C0F;&#x5316;&#x65B9;&#x7A0B; (6), &#x5C06;&#x524D;&#x4E00;&#x9879;&#x8FDB;&#x884C;&#x4E00;&#x9636;&#x6CF0;&#x52D2;&#x5C55;&#x5F00;,</p>
+<p><script type="math/tex; mode=display">
+\sum_{x} [I_{t+1}(W(x; u)) + \nabla I_{t+1}\frac{\partial W}{\partial u} \Delta u - T(x)]^{2}, \qquad (7)
+</script></p>
+<p>&#x5176;&#x4E2D; <script type="math/tex; ">\nabla I_{t+1}</script> &#x4E3A; <script type="math/tex; ">W(x; u)</script> &#x5904;&#x7684;&#x56FE;&#x50CF;&#x68AF;&#x5EA6;, <script type="math/tex; ">\frac{\partial W}{\partial u}</script> &#x4E3A;&#x5339;&#x914D;&#x7684; Jacobian &#x77E9;&#x9635; (&#x5BF9;&#x5149;&#x6D41;&#x6765;&#x8BB2;&#x5C31;&#x662F; 2*2 &#x7684;&#x5355;&#x4F4D;&#x9635;)</p>
+<p>&#x4E0B;&#x9762;&#x53EF;&#x4EE5;&#x6C42;&#x6700;&#x5C0F;&#x5316;&#x65B9;&#x7A0B; (7) &#x7684;&#x4E00;&#x4E2A;&#x95ED;&#x5F0F;&#x89E3;, &#x4EE4; (7) &#x5BF9;&#x4E8E; <script type="math/tex; ">\Delta u</script> &#x7684;&#x504F;&#x5BFC;&#x6570;&#x4E3A; 0 &#x53EF;&#x5F97;</p>
+<p><script type="math/tex; mode=display">
+\sum_{x} S^{T} [I_{t+1}(W(x; u)) + \nabla I_{t+1}\frac{\partial W}{\partial u} \Delta u - T(x)] = 0, \qquad (8)
+</script></p>
+<p>&#x5176;&#x4E2D; <script type="math/tex; ">S = [\nabla I_{t+1} \frac{\partial W}{\partial u}]</script>, &#x4E8E;&#x662F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x89E3;&#x51FA; <script type="math/tex; ">\Delta u</script></p>
+<p><script type="math/tex; mode=display">
+\Delta u = H^{-1} \sum_{x} S^{T} [T(x) - I_{t+1}(W(x; u))], \qquad (9)
+</script></p>
+<p>&#x5176;&#x4E2D; <script type="math/tex; ">H = \sum_{x} S^{T}S</script> &#x4E3A; <script type="math/tex; ">n \times n</script> &#x7684; Hessian &#x77E9;&#x9635;&#x7684;&#x4F30;&#x8BA1;.</p>
+<p>&#x7531;&#x4E8E; <script type="math/tex; ">S</script> &#x4F9D;&#x8D56;&#x4E8E; &#x56FE;&#x50CF; <script type="math/tex; ">I_{t+1}</script> &#x5BF9; <script type="math/tex; ">u</script> &#x7684;&#x68AF;&#x5EA6;, &#x6240;&#x4EE5; <script type="math/tex; ">S, H</script> &#x6BCF;&#x6B21;&#x8FED;&#x4EE3;&#x7684;&#x8FC7;&#x7A0B;&#x90FD;&#x9700;&#x8981;&#x88AB;&#x91CD;&#x590D;&#x8BA1;&#x7B97;. &#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5BF9;&#x9700;&#x8981;&#x4F18;&#x5316;&#x7684;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x4E00;&#x4E0B;&#x4FEE;&#x6539;.</p>
+<p><script type="math/tex; mode=display">
+\sum_{x} [T(W(x; \Delta u)) - I_{t+1}(W(x; u))]^{2}, (10)
+
+W(x; u) = W(x; u) \circ W(x; \Delta u)^{-1} (u = u - \Delta u)
+</script></p>
+<p>&#x6B64;&#x65F6;&#x5C06; (10) &#x8FDB;&#x884C;&#x4E00;&#x9636;&#x6CF0;&#x52D2;&#x5C55;&#x5F00;&#x5F97;&#x5230;</p>
+<p><script type="math/tex; mode=display">
+\sum_{x} [T(W(x;0)) + \nabla T \frac{\partial W}{\partial u} \Delta u - I_{t+1}(W(x; u))], \qquad (11)
+</script></p>
+<p>&#x5176;&#x4E2D; <script type="math/tex; ">W(x;0)</script> &#x5C31;&#x662F;&#x4E0D;&#x53D8;&#x5339;&#x914D;, &#x4E0E; (9) &#x540C;&#x7406;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x89E3; (11) &#x5F97;&#x5230;</p>
+<p><script type="math/tex; mode=display">
+\Delta u = H^{'-1} \sum_{x} S^{'T} [I_{t+1}(W(x; u)) - T(x)], \qquad (12)
+</script></p>
+<p>&#x5176;&#x4E2D; <script type="math/tex; ">S^{'} = [\nabla T \frac{\partial W}{\partial u}]</script>, <script type="math/tex; ">H^{'} = \sum_{x} S^{'T}S^{'}</script>, &#x5E76;&#x4E14; Jaconbian &#x77E9;&#x9635;  <script type="math/tex; ">\frac{\partial W}{\partial u}</script> &#x662F;&#x5728; <script type="math/tex; ">(x; 0)</script> &#x5904;&#x8BA1;&#x7B97;&#x7684;. &#x6240;&#x4EE5; <script type="math/tex; ">S^{'}, H^{'}</script> &#x90FD;&#x662F;&#x4E0D;&#x4F9D;&#x8D56;&#x4E8E; <script type="math/tex; ">u</script> &#x53EF;&#x4EE5;&#x63D0;&#x524D;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;.</p>
+<p>&#x5B9E;&#x9645;&#x4E2D;, &#x672C;&#x6587;&#x5BF9; patch &#x8FDB;&#x884C; mean-normalize</p>
+<p>&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x7684;&#x90E8;&#x5206;&#x662F;, &#x5982;&#x679C;&#x5339;&#x914D;&#x8D85;&#x51FA; patch &#x7684;&#x5927;&#x5C0F;, &#x5F88;&#x96BE;&#x80FD;&#x591F;&#x5F97;&#x5230;&#x4F18;&#x5316;. &#x6B64;&#x5916;, &#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x6700;&#x597D;&#x662F;&#x80FD;&#x5728;&#x5BF9;&#x5E94; patch &#x76F8;&#x4F3C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;, &#x4E8E;&#x662F;&#x672C;&#x6587;&#x91C7;&#x7528; corse-to-fine &#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x7684;&#x5BFB;&#x627E;.</p>
+<h2 id="22-fast-optical-flow-with-multi-scale-reasoning">2.2 Fast Optical flow with multi-scale reasoning</h2>
+<p><script type="math/tex; ">\theta_{ss}</script>: &#x5206;&#x8FA8;&#x7387;&#x6700;&#x4F4E;&#x5C42;&#x7D22;&#x5F15;\
+<script type="math/tex; ">\theta_{sd}</script>: &#x4E0B;&#x91C7;&#x6837;&#x7387;, &#x4E00;&#x822C;&#x5927;&#x4E8E; 1 \
+<script type="math/tex; ">\theta_{sf}</script>: &#x5206;&#x8FA8;&#x7387;&#x6700;&#x9AD8;&#x5C42;&#x7D22;&#x5F15;</p>
+<p>1) Creation of grid</p>
+<p>&#x7531;&#x53C2;&#x6570; <script type="math/tex; ">\theta_{ov} \in [0, 1)</script> &#x51B3;&#x5B9A;&#x5212;&#x5206;&#x7684; patch &#x6570; <script type="math/tex; ">N_{s}</script>, <script type="math/tex; ">\theta_{ov}</script> &#x8868;&#x793A;patch &#x95F4;&#x91CD;&#x53E0;&#x7684;&#x6BD4;&#x7387;, &#x4F8B;&#x5982; <script type="math/tex; ">\theta_{ov} = 0</script> &#x8868;&#x793A;&#x4E24;&#x4E2A;&#x90BB;&#x8FD1;&#x7684; patch &#x6CA1;&#x6709;&#x91CD;&#x53E0;.</p>
+<p>2) Initialization</p>
+<p>&#x5BF9;&#x4E8E;&#x7B2C;&#x4E00;&#x6B21;&#x8FED;&#x4EE3;(<script type="math/tex; ">s = \theta_{ss}</script>), &#x6211;&#x4EEC;&#x5C06; flow &#x521D;&#x59CB;&#x5316;&#x4E3A; 0, &#x5BF9;&#x4E8E;&#x540E;&#x9762;&#x7684;
+<script type="math/tex; mode=display">
+u_{i, init} = U_{s+1}(\frac{x}{\theta_{sd}})\theta_{sd}
+</script></p>
+<p>3) Inverse search</p>
+<p>as in 2.1</p>
+<p>4) Densification</p>
+<p>&#x52A0;&#x4E00;&#x6B65;&#x6765;&#x589E;&#x52A0;&#x7ED3;&#x679C;&#x7684;&#x9C81;&#x68D2;&#x6027;, &#x57FA;&#x4E8E;&#x6B65;&#x9AA4; (3) &#x6211;&#x4EEC;&#x83B7;&#x5F97;&#x66F4;&#x65B0;&#x540E;&#x7684;&#x5339;&#x914D;&#x5411;&#x91CF; <script type="math/tex; ">u_{i}</script></p>
+<p>&#x9996;&#x5148;</p>
+<p>if <script type="math/tex; ">||u_{i, init} - u_{i}||_{2} > \theta_{ps}</script> \
+<script type="math/tex; ">\quad</script> <script type="math/tex; ">u_{i} = u_{i, init}</script></p>
+<p>&#x4E4B;&#x540E;, &#x5BF9;&#x6BCF;&#x4E2A;&#x50CF;&#x7D20; <script type="math/tex; ">x</script> &#x4E0A;&#x7684;&#x5339;&#x914D;&#x5411;&#x91CF;&#x8FDB;&#x884C;&#x52A0;&#x6743;&#x5E73;&#x5747;(&#x7531;&#x4E8E;&#x4E0A;&#x9762;&#x7684; patch &#x6709;&#x91CD;&#x53E0;)</p>
+<p><script type="math/tex; mode=display">
+U_{s}(x) = \frac{1}{Z} \sum_{i}^{N_{s}} \frac{\lambda_{i, x}}{max(1, ||d_{i}(x)||_{2})} u_{i}, \qquad (3)
+</script></p>
+<p>&#x5176;&#x4E2D;, &#x82E5;&#x5728;&#x53C2;&#x8003;&#x5E27;&#x4E2D; patch <script type="math/tex; ">i</script> &#x5305;&#x542B;&#x50CF;&#x7D20; <script type="math/tex; ">x</script>, &#x5219;&#x6307;&#x793A;&#x51FD;&#x6570; <script type="math/tex; ">\lambda_{i, x} = 1</script></p>
+<p><script type="math/tex; ">d_{i}(x) = I_{t+1}(x + u_{i}) - T(x)</script> &#x8868;&#x793A;&#x5BF9;&#x5E94;&#x50CF;&#x7D20;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x522B;.</p>
+<p><script type="math/tex; ">Z = \sum_{i} \lambda_{i, x} / max(1, \Vert d_{i}(x) \Vert_{2})</script>, &#x4E3A;&#x5F52;&#x4E00;&#x5316;&#x7CFB;&#x6570;.</p>
+<p>5) Variational energy minimization
+&#x53D8;&#x5206;&#x80FD;&#x91CF;&#x4F18;&#x5316;, &#x53C2;&#x89C1;2.3</p>
+<h2 id="23-fast-variational-refinement">2.3 Fast Variational refinement</h2>
+<p>&#x53D8;&#x5206;&#x80FD;&#x91CF;&#x4F18;&#x5316;&#x7684;&#x80FD;&#x91CF;&#x51FD;&#x6570;&#x4E3A;</p>
+<p><script type="math/tex; mode=display">
+E(U) = \int_{\omega} \sigma \Phi(E_{I}) + \gamma \Phi(E_{G}) + \alpha \Phi(E_{S}) dx, \qquad (4)
+</script></p>
+<p>&#x5176;&#x4E2D;, <script type="math/tex; ">E_{I}</script> &#x4E3A; intensity data trem, <script type="math/tex; ">E_{G}</script> &#x4E3A; gradient data term, <script type="math/tex; ">E_{S}</script> &#x4E3A; smoothness term.</p>
+<p><script type="math/tex; ">\Phi(a^{2}) = \sqrt(a^{2} + \epsilon^{2})</script>, &#x5176;&#x4E2D; <script type="math/tex; ">\epsilon = 0.001</script></p>
+<p>&#x4EE4; <script type="math/tex; ">\nabla_{3} = (\partial x, \partial y, \partial z)^{T}</script> , 
+<script type="math/tex; ">\nabla_{2} = (\partial x, \partial y)^{T}</script> &#x5BF9;&#x4E8E; intensity data term, &#x4E3B;&#x8981;&#x662F;&#x57FA;&#x4E8E;&#x76F8;&#x90BB;&#x5E27;&#x56FE;&#x50CF;&#x7684;&#x5149;&#x7167;&#x5F3A;&#x5EA6;(&#x56FE;&#x50CF;&#x50CF;&#x7D20;&#x503C;)&#x5E94;&#x8BE5;&#x662F;&#x8FD1;&#x4F3C;&#x4E0D;&#x53D8;&#x7684;. </p>
+<p><script type="math/tex; mode=display">
+E_{I} = u^{T}J_{0}u
+
+J_{0} = \beta_{0} (\nabla_{3}I)(\nabla_{3}^{T}I)
+
+\beta_{0} = (||\nabla_{2}I||^{2} + 0.001)^{-1}
+</script></p>
+<p>&#x5BF9;&#x4E8E; gradient data term, &#x4E3B;&#x8981;&#x662F;&#x57FA;&#x4E8E;&#x50CF;&#x7D20;&#x7684;&#x90BB;&#x57DF;&#x68AF;&#x5EA6;&#x4E0D;&#x4F1A;&#x6709;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#x53D8;&#x5316;</p>
+<p><script type="math/tex; mode=display">
+E_{G} = u^{T} J_{xy} u
+
+J_{xy} = \beta_{x}(\nabla_{3}I_{dx})(\nabla_{3}^{T}I_{dx}) + 
+\beta_{y}(\nabla_{3}I_{dy})(\nabla_{3}^{T}I_{dy})
+
+\beta_{x} = (||\nabla_{2}I_{dx}||^{2} + 0.001)^{-1}
+
+\beta_{y} = (||\nabla_{2}I_{dy}||^{2} + 0.001)^{-1}
+</script></p>
+<p>&#x5BF9;&#x4E8E; smoothness term </p>
+<p><script type="math/tex; mode=display">
+E_{S} = ||\nabla u||^{2} + ||\nabla v||^{2}
+</script></p>
+<p>&#x975E;&#x51F8;&#x80FD;&#x91CF;&#x51FD;&#x6570; <script type="math/tex; ">E(U)</script> &#x7684;&#x8FED;&#x4EE3;&#x6700;&#x5C0F;&#x5316;&#x901A;&#x8FC7; <script type="math/tex; ">\theta_{vo}</script> &#x6B21;&#x4E0D;&#x52A8;&#x70B9;&#x8FED;&#x4EE3;, &#x4EE5;&#x53CA; <script type="math/tex; ">\theta_{vi}</script> &#x6B21; SOR (Successive Over Realaxation) &#x8FED;&#x4EE3;&#x6765;&#x5B9E;&#x73B0;. &#x4E0D;&#x52A8;&#x70B9;&#x8FED;&#x4EE3;&#x6BD4;&#x8F83;&#x901A;&#x7528;, SOR &#x8FED;&#x4EE3;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x6536;&#x655B;&#x6BD4;&#x8F83;&#x7A33;&#x5B9A;.</p>
+<h2 id="24-extension">2.4 Extension</h2>
+<p>1) Parallelization</p>
+<p>2) Using RGB</p>
+<p>3) Merging forward-backward flow estimations</p>
+<p>4) Robust error norms</p>
+<p>5) Using DIS for stereo depth</p>
+<h1 id="3-experiments">3. Experiments</h1>
+<p>&#x7565;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 1. 光流">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="section1.2.html" class="navigation navigation-next " aria-label="Next page: 1.2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.1 快速反向匹配搜索","level":"1.2.1","depth":2,"next":{"title":"1.2","level":"1.2.2","depth":2,"path":"chapter1/section1.2.md","ref":"chapter1/section1.2.md","articles":[]},"previous":{"title":"1. 光流","level":"1.2","depth":1,"path":"chapter1/README.md","ref":"chapter1/README.md","articles":[{"title":"1.1 快速反向匹配搜索","level":"1.2.1","depth":2,"path":"chapter1/section1.1.md","ref":"chapter1/section1.1.md","articles":[]},{"title":"1.2","level":"1.2.2","depth":2,"path":"chapter1/section1.2.md","ref":"chapter1/section1.2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","livereload"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/section1.1.md","mtime":"2018-04-25T12:55:12.670Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-25T13:00:59.832Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
